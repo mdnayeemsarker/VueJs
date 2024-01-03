@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .canvas{
+            height: 250px;
+            width: 250px;
+            background-color: burlywood;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <button @click="Event">Click Event</button>
+        <div class="canvas" @mousemove="over">
+            {{log.x}} , {{log.y}}
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
