@@ -20,8 +20,8 @@
             <li v-for="user in users">{{user}}</li>
         </ul>
         <ul>
-            <li>Name Sex Age Address</li>
-            <li v-for="user in users">{{user.name}} {{user.sex}} {{user.age}} {{user.address}}</li>
+            <li>SN Name Sex Age Address</li>
+            <li v-for="(user, index) in users"> {{index}} {{user.name}} {{user.sex}} {{user.age}} {{user.address}}</li>
         </ul>
     </div>
     <script src="app.js"></script>
