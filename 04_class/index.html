@@ -9,9 +9,9 @@
 <body>
     <div id="app">
         <h3>I Earn {{dollar}} $ per day</h3>
-        <button @click="dollar++">+1</button>
+        <button @click="Calculation(1)">+1</button>
         {{dollar}}
-        <button v-on:click="dollar--">-1</button>
+        <button v-on:click="Calculation(-1)">-1</button>
     </div>
     <script src="app.js"></script>
 </body>

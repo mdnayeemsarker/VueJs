@@ -4,5 +4,8 @@ var app = new Vue({
         dollar: 5,
     },
     methods: {
+        Calculation(data){
+            this.dollar += data
+        }
     },
 })
