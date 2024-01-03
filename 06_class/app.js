@@ -4,7 +4,10 @@ var app = new Vue({
        name: 'Nayeem'
     },
     methods: {
-        NameChange(event){
+        NameChangeKeyUp(event){
+            this.name = event.target.value
+        },   
+        NameChangeKeyPress(event){
             this.name = event.target.value
         }     
     },

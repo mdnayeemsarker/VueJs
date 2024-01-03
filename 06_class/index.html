@@ -10,7 +10,8 @@
 <body>
     <div id="app">
         <h1>My Name is {{name}}</h1>
-        <input type="text" @keyup="NameChange">
+        <input type="text" @keyup="NameChangeKeyUp">
+        <input type="text" @keypress="NameChangeKeyPress">
     </div>
     <script src="app.js"></script>
 </body>
