@@ -6,6 +6,7 @@
     <AllFriends :friends="friends" @delete="deleteFriend"/>
     <OnlineFriends :friends="friends"/>
     <OfflineFriends :friends="friends"/>
+    <HookPart/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import NavBar from './components/NavBar.vue'
 import AllFriends from './components/AllFriends.vue'
 import OnlineFriends from './components/OnlineFriends.vue'
 import OfflineFriends from './components/OfflineFriends.vue'
+import HookPart from './components/HookPart.vue'
 
 export default {
   name: 'App',
@@ -36,6 +38,7 @@ export default {
     AllFriends,
     OnlineFriends,
     OfflineFriends,
+    HookPart,
   },
   methods:{
     deleteFriend(payload){
