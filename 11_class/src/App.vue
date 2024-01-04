@@ -3,8 +3,9 @@
     <NavBar/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <h3>{{ title }}</h3>
-    <AllFriends/>
-    <OnlineFriends/>
+    <AllFriends :friends="friends"/>
+    <OnlineFriends :friends="friends"/>
+    <OfflineFriends :friends="friends"/>
   </div>
 </template>
 
@@ -13,12 +14,20 @@ import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
 import AllFriends from './components/AllFriends.vue'
 import OnlineFriends from './components/OnlineFriends.vue'
+import OfflineFriends from './components/OfflineFriends.vue'
 
 export default {
   name: 'App',
   data(){
     return {
-      title: 'Learn by MD NAYEEM SARKER'
+      title: 'Learn by MD NAYEEM SARKER',
+      friends: [
+        {name: 'A',status: true},
+        {name: 'B',status: false},
+        {name: 'C',status: true},
+        {name: 'D',status: false},
+        {name: 'E',status: true}
+      ]
     }
   },
   components: {
@@ -26,6 +35,7 @@ export default {
     NavBar,
     AllFriends,
     OnlineFriends,
+    OfflineFriends,
   }
 }
 </script> 

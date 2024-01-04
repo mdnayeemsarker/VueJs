@@ -10,15 +10,10 @@
 <script>
 export default {
     name: 'AllFriends',
+    props: ['friends'],
     data() {
         return {
-            friends: [
-                {name: 'A',status: true},
-                {name: 'B',status: true},
-                {name: 'C',status: true},
-                {name: 'D',status: true},
-                {name: 'E',status: true}
-            ]
+            
         }
     }
 }

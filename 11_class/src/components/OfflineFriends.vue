@@ -1,15 +1,15 @@
 <template>
-    <div id="onlinefriends">
-        <h2>Online Friends</h2>
+    <div id="offlinefriends">
+        <h2>Offline Friends</h2>
         <div v-for="(friend, index) in friends" :key="index">
-            <h6 v-if="friend.status">{{ friend.name }}</h6>
+            <h6 v-if="!friend.status">{{ friend.name }}</h6>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'OnlineFriends',
+    name: 'OfflineFriends',
     props: ['friends'],
     data() {
         return {
