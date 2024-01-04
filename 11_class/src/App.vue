@@ -30,7 +30,7 @@ export default {
     NavBar,
   }
 }
-</script>
+</script> 
 
 <style>
 #app {
