@@ -1,10 +1,11 @@
 <template>
     <div id="allposts">
         <h2>All Posts</h2> <hr>
-        <div v-for="(post, index) in posts" :key="index">
+        <input type="text" v-model="inputText">
+        <div v-for="post in filterposts" :key="post.id">
             <h5>Post id: {{ post.id }} | Post userid: {{ post.userId }}</h5>
             <h4>Post title: {{ post.title }}</h4>
-            <p>Post body: {{ post.body | snippet }}</p> <hr>
+            <span>Post body: {{ post.body }}</span> <hr>
         </div>
     </div>
 </template>
@@ -15,7 +16,15 @@ export default {
     name: 'AllPosts',
     data() {
         return {
-            posts: []
+            posts: [],
+            inputText: '',
+        }
+    },
+    computed:{
+        filterposts(){
+            return this.posts.filter( post => {
+                return post.title.match(this.inputText)
+            })
         }
     },
     created(){
