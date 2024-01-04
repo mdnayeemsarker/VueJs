@@ -4,7 +4,7 @@
         <div v-for="(post, index) in posts" :key="index">
             <h5>Post id: {{ post.id }} | Post userid: {{ post.userId }}</h5>
             <h4>Post title: {{ post.title }}</h4>
-            <span>Post body: {{ post.body }}</span> <hr>
+            <p>Post body: {{ post.body | snippet }}</p> <hr>
         </div>
     </div>
 </template>
