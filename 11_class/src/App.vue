@@ -3,7 +3,7 @@
     <NavBar/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <h3>{{ title }}</h3>
-    <AllFriends :friends="friends"/>
+    <AllFriends :friends="friends" @delete="deleteFriend"/>
     <OnlineFriends :friends="friends"/>
     <OfflineFriends :friends="friends"/>
   </div>
@@ -36,6 +36,14 @@ export default {
     AllFriends,
     OnlineFriends,
     OfflineFriends,
+  },
+  methods:{
+    deleteFriend(payload){
+      // console.log(payload);
+      this.friends = this.friends.filter(friend => {
+        return friend.name !== payload.name
+      })
+    }
   }
 }
 </script> 
