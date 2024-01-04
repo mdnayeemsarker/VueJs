@@ -3,6 +3,14 @@
     <NavBar/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <h3>{{ title }}</h3>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Post</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
   </div>
 </template>
 
