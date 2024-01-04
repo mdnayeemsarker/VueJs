@@ -23,13 +23,7 @@ export default {
     },
     Contact(){
       this.$router.push( {name: 'contact-us'} )
-    },
-    Back(){
-
-    },
-    Fowerd(){
-
-    },
+    }
   },
   watch:{
     $route: 'updateId'

@@ -7,6 +7,8 @@
               <li> <router-link :to="{name: 'contact-us'}">Contact</router-link> </li>
           </ul>
       </nav>
+      <button @click="About">Back</button>
+      <button @click="Contact">Fowerd</button>
       <div>
         <ul><li v-for="(id, index) in userIds" :key="{index}"><router-link :to="{name:'profile', params:{user_id:id}}">Profile {{id}}</router-link></li></ul>
       </div>
@@ -20,6 +22,14 @@
           return{
             userIds: ['1', '2', '3', '4', '5', '6', '7']
           }
+      },
+      methods:{
+        Back(){
+          this.$router.go(-1)
+        },
+        Fowerd(){
+          this.$router.go(1)
+        },
       }
   }
   </script>
@@ -38,5 +48,8 @@
       padding: 8px;
       display: inline-block;
       list-style-type: none;
+  }
+  a.router-link-exact-active{
+    color: #fa0505;
   }
   </style>
