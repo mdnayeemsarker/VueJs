@@ -26,7 +26,7 @@ export default new Router({
       component: Contact
     },
     {
-      path: '/profile/:id',
+      path: '/profile/:user_id',
       name: 'profile',
       component: Profile
     },

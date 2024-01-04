@@ -1,6 +1,6 @@
 <template>
   <div class="Profile">
-    <h1>This is Profile component</h1>
+    <h1>This is Profile component where user id is ( {{userId }} )</h1>
   </div>
 </template>
 
@@ -9,6 +9,7 @@ export default {
   name: 'Profile',
   data () {
     return {
+      userId: this.$route.params.user_id
     }
   }
 }
